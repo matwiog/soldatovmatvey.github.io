@@ -1,0 +1,101 @@
+/* === GLOBAL === */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1b1f32, #0b0c10 60%);
+  font-family: "Inter", Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 640px;
+  margin: auto;
+  padding: 40px 20px;
+  animation: fadeIn 1.2s ease;
+}
+
+/* === AVATAR === */
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 25px rgba(120, 160, 255, 0.5);
+  animation: floatIn 1.5s ease;
+}
+
+/* === HEADINGS === */
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* === TITLES === */
+
+.section-title {
+  margin-top: 35px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === CARDS === */
+
+.card {
+  display: block;
+  margin: 15px auto;
+  padding: 16px 20px;
+  width: 100%;
+  max-width: 600px;
+  
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.25s ease;
+
+  animation: fadeUp 1s ease;
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(120,160,255,0.25);
+}
+
+/* === ANIMATIONS === */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
