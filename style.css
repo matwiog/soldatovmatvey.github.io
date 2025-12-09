@@ -127,28 +127,42 @@ h2 {
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* Mobile: center card contents and stack icon above text */
+/* === MOBILE FIXES === */
 @media (max-width: 480px) {
+
+  /* Контейнер — увеличиваем отступы */
+  .container {
+    padding: 30px 16px 100px;
+  }
+
+  /* Кнопки — делаем уже и ровнее */
   .card {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 14px;
+    padding: 14px 16px;
     gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  .card .icon {
-    width: 28px;
-    height: 28px;
-    opacity: 0.95;
-    display: block;
-    transform: none;
-    margin: 0;
+  /* Иконки — уменьшаем для аккуратного расположения */
+  .icon {
+    width: 16px;
+    height: 16px;
   }
 
-  /* Remove small upward nudge on LinkedIn icon for mobile */
   .icon.linkedin {
-    transform: none;
+    transform: translateY(-2px);
+  }
+
+  /* Логотипы партнёров — уменьшаем на телефонах */
+  .icon.partner {
+    width: calc(var(--partner-size) * 0.75);
+    height: calc(var(--partner-size) * 0.75);
+  }
+
+  /* Текст в кнопках — делаем компактнее */
+  .card {
+    font-size: 15px;
   }
 }
