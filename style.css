@@ -68,7 +68,7 @@ h2 {
 
   margin: 14px auto;
   padding: 16px 20px;
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 600px;
 
   background: rgba(255,255,255,0.05);
@@ -80,6 +80,8 @@ h2 {
   border: 1px solid rgba(255,255,255,0.10);
   transition: 0.25s ease;
   backdrop-filter: blur(8px);
+
+  box-sizing: border-box;
 
   animation: fadeUp 1s ease;
 }
